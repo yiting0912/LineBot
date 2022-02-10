@@ -220,7 +220,7 @@ def getTaipei101LocationMessage():
 def getMRTVideoMessage():
     message = dict()
     message["type"] = "audio"
-    message["originalContentUrl"] = F"{end_point}/static/mrt_sound.mp4"
+    message["originalContentUrl"] = F"{end_point}/static/taipei_101_video.mp4"
     message["previewImageUrl"] = F"{end_point}/static/taipei_101.jpeg"
     return message
 
