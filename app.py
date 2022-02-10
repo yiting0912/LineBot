@@ -48,6 +48,9 @@ def index():
                     payload["messages"] = [getNameEmojiMessage()]
                 elif text == "出去玩囉":
                     payload["messages"] = [getPlayStickerMessage()]
+
+                elif text == "台北101圖":
+                    payload["messages"] = [getTaipei101ImageMessage()]
                 elif text == "台北101":
                     payload["messages"] = [getTaipei101ImageMessage(),
                                            getTaipei101LocationMessage(),
@@ -236,6 +239,9 @@ def getTaipei101ImageMessage(originalContentUrl=F"{end_point}/static/taipei_101.
 
 def getImageMessage(originalContentUrl):
     message = dict()
+    message["type"] = "image"
+     "originalContentUrl": "image",
+    "previewImageUrl": "image"
     return message
 
 
