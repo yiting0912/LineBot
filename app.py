@@ -203,7 +203,7 @@ def getCarouselMessage(data):
                 "action": {
                   "type": "postback",
                   "label": "台北101",
-                  "data": "action=buy&itemid=111"
+                  "data": json.dumps(data)
                 }
               },
               {
@@ -211,7 +211,7 @@ def getCarouselMessage(data):
                 "action": {
                   "type": "postback",
                   "label": "台北101",
-                  "data": "action=buy&itemid=111"
+                  "data": json.dumps(data)
                 }
               }
           ]
