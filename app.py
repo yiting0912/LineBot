@@ -265,18 +265,6 @@ def getCallCarMessage(data):
     }
     return message
 
-
-{
-   "type":"datetimepicker",
-   "label":"Select date",
-   "data":"storeId=12345",
-   "mode":"datetime",
-   "initial":"2017-12-25t00:00",
-   "max":"2018-01-24t23:59",
-   "min":"2017-12-25t00:00"
-}
-
-
 def getPlayStickerMessage():
     message = dict()
     message["type"] = "sticker"
