@@ -221,7 +221,7 @@ def getCarouselMessage(data):
 
 
 def getLocationConfirmMessage(title, latitude, longitude):
-    data = {"title":ttitle, "latitude":latitude, 
+    data = {"title":title, "latitude":latitude, 
             "longitude":longitude,'actions':get_near}
     message = {
       "type": "template",
