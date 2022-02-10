@@ -213,7 +213,7 @@ def getCarouselMessage(data):
                   "label": "台北101",
                   "data": "action=buy&itemid=111"
                 }
-              },
+              }
           ]
       }
     }
@@ -233,7 +233,7 @@ def getLocationConfirmMessage(title, latitude, longitude):
               {
                 "type": "postback",
                 "label": "是",
-                "text": json.dumps(data)
+                "data": json.dumps(data)
               },
               {
                 "type": "message",
