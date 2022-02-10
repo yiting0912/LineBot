@@ -247,8 +247,34 @@ def getLocationConfirmMessage(title, latitude, longitude):
 
 
 def getCallCarMessage(data):
-    message = dict()
+    message = {
+      "type": "template",
+      "altText": "this is a template",
+      "template": {
+          "type": "buttoms",
+          "text": f"請選擇至 {data['title']} 預約叫車時間",
+          "actions": [
+              {
+                "type": "datetimepicker",
+                "label": "預約",
+                "data": json.dumps(data),
+                "mode":"datetime"
+              }
+          ]
+      }
+    }
     return message
+
+
+{
+   "type":"datetimepicker",
+   "label":"Select date",
+   "data":"storeId=12345",
+   "mode":"datetime",
+   "initial":"2017-12-25t00:00",
+   "max":"2018-01-24t23:59",
+   "min":"2017-12-25t00:00"
+}
 
 
 def getPlayStickerMessage():
