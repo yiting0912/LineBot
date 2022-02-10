@@ -110,7 +110,7 @@ def index():
                         ]
                 replyMessage(payload)
             elif events[0]["message"]["type"] == "location":
-                title = events[0]["message"]["title"]
+                title = events[0]["message"].get["title", ""]
                 latitude = events[0]["message"]["latitude"]
                 longitude = events[0]["message"]["longitude"]
                 payload["messages"] = [getLocationConfirmMessage(title, latitude, longitude)]
@@ -264,6 +264,7 @@ def getCallCarMessage(data):
       }
     }
     return message
+
 
 def getPlayStickerMessage():
     message = dict()
